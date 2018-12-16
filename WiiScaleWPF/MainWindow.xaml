@@ -1,0 +1,23 @@
+﻿<Window x:Class="WiiScaleWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WiiScaleWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="900" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="lblWeight" Height="187" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Text="88.710" FontSize="200" FontFamily="Lucida Console"/>
+                <Button x:Name="lblUnit" Background="Transparent" BorderThickness="0" BorderBrush="Transparent" Height="105" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="70" FontFamily="Microsoft Sans Serif" Click="LblUnit_Click">
+                    kg
+                </Button>
+            </StackPanel>
+            <TextBlock x:Name="lblQuality" Height="100" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,10,0,0" FontSize="80" FontFamily="Wingdings" Text="®®®¡¡"/>
+            <Button x:Name="btnReset" Height="80" FontSize="80" FontFamily="Microsoft Sans Serif" Margin="0,10,0,0" VerticalContentAlignment="Center" Click="BtnReset_Click">
+                <TextBlock VerticalAlignment="Center" Text="Zero"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
