@@ -15,7 +15,7 @@ namespace WiiScaleWPF
         ConnectionManager cm = null;
         Timer BoardTimer = null;
         float ZeroedWeight = 0;
-        float[] History = new float[100];
+        float[] History = new float[10000];
         int HistoryBest = 1, HistoryCursor = -1;
         string StarFull = "", StarEmpty = "";
 
@@ -119,7 +119,8 @@ namespace WiiScaleWPF
                         kg *= 2.20462262f;
                     }
 
-                    lblWeight.Text = (kg >= 0.0f && kg < 10.0f ? " " : "") + kg.ToString("0.00") + (kg <= -10.0f ? "" : "0");
+                    //lblWeight.Text = (kg >= 0.0f && kg < 10.0f ? " " : "") + kg.ToString("0.0") + (kg <= -10.0f ? "" : "0");
+                    lblWeight.Text = kg.ToString("0.0");
 
                     lblQuality.Text = "";
                     for (int i = 0; i < 5; i++)
